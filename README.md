@@ -20,7 +20,7 @@ Note that the file `musicbrainz_config.properties` must reflect your DB name:
 Download [Apache Jena](https://jena.apache.org/download/) and define the `JENA_DIR` environment variable.
 
 
-### Ontop >= 3.0.0
+### Ontop >= 3.0.1
 Download `ontop-cli` on https://github.com/ontop/ontop/releases and define the `ONTOP_DIR` environment variable.
 
 
@@ -35,9 +35,8 @@ ${JENA_DIR}/bin/rdfcat -out Turtle mappings/*.ttl > merged-mapping.ttl
 
 
 ## SPARQL endpoint
-
-
-## Materialization of the RDF graph
 ```bash
 ${ONTOP_DIR}/ontop endpoint --mapping merged-mapping.ttl -p musicbrainz_config.properties
 ```
+
+## Materialization of the RDF graph
