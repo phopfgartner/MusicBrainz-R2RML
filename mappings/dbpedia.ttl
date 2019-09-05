@@ -42,8 +42,8 @@ lb:artist_dbpedia a rr:TriplesMap ;
          INNER JOIN link_type ON link_type = link_type.id
          INNER JOIN url on l_artist_url.entity1 = url.id
        WHERE link_type.gid='29651736-fa6d-48e4-aadc-a557c6add1cb'
-       AND url SIMILAR TO
-                 'http://(de|el|en|es|ko|pl|pt).wikipedia.org/wiki/%'"""] ;
+       AND url ~
+                 'http://(de|el|en|es|ko|pl|pt).wikipedia.org/wiki/*'"""] ;
   rr:subjectMap lb:sm_artist ;
   rr:predicateObjectMap
     [rr:predicate owl:sameAs ;
@@ -64,8 +64,8 @@ lb:release_group_dbpedia a rr:TriplesMap ;
          INNER JOIN link_type ON link_type = link_type.id
          INNER JOIN url on l_release_group_url.entity1 = url.id
        WHERE link_type.gid='6578f0e9-1ace-4095-9de8-6e517ddb1ceb'
-       AND url SIMILAR TO
-                 'http://(de|el|en|es|ko|pl|pt).wikipedia.org/wiki/%'"""] ;
+       AND url ~
+                 'http://(de|el|en|es|ko|pl|pt).wikipedia.org/wiki/*'"""] ;
   rr:subjectMap lb:sm_release_group ;
   rr:predicateObjectMap
     [rr:predicate rdfs:seeAlso ;
@@ -85,8 +85,8 @@ lb:area_dbpedia a rr:TriplesMap ;
          INNER JOIN link_type ON link_type = link_type.id
          INNER JOIN url on l_area_url.entity1 = url.id
        WHERE link_type.gid='9228621d-9720-35c3-ad3f-327d789464ec'
-       AND url SIMILAR TO
-                 'http://(de|el|en|es|ko|pl|pt).wikipedia.org/wiki/%'"""] ;
+       AND url ~
+                 'http://(de|el|en|es|ko|pl|pt).wikipedia.org/wiki/*'"""] ;
   rr:subjectMap lb:sm_area ;
   rr:predicateObjectMap
     [rr:predicate owl:sameAs ;
